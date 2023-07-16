@@ -1,0 +1,13 @@
+execute if entity @a[team=ct,x=-157,y=2,z=-136,dx=0.5,dy=0.5,dz=0.5,nbt={SelectedItem:{id:"minecraft:shears"}}] run title @a title {"text":""}
+execute if entity @a[team=ct,x=-157,y=2,z=-136,dx=0.5,dy=0.5,dz=0.5,nbt={SelectedItem:{id:"minecraft:shears"}}] run title @a subtitle {"text":"The bomb has been defused!","color":"blue"}
+
+execute if entity @a[team=ct,x=-157,y=2,z=-136,dx=0.5,dy=0.5,dz=0.5,nbt={SelectedItem:{id:"minecraft:shears"}}] run fill -157 2 -135 -157 2 -137 minecraft:lime_concrete
+execute if entity @a[team=ct,x=-157,y=2,z=-136,dx=0.5,dy=0.5,dz=0.5,nbt={SelectedItem:{id:"minecraft:shears"}}] run fill -158 2 -136 -156 2 -136 minecraft:lime_concrete
+
+execute if entity @a[team=ct,x=-157,y=2,z=-136,dx=0.5,dy=0.5,dz=0.5,nbt={SelectedItem:{id:"minecraft:shears"}}] run scoreboard players set bomb status 2
+
+execute if entity @a[team=ct,x=-157,y=2,z=-136,dx=0.5,dy=0.5,dz=0.5,nbt={SelectedItem:{id:"minecraft:shears"}}] run kill @e[type=minecraft:armor_stand,tag=bomb]
+
+execute if entity @a[team=ct,x=-157,y=2,z=-136,dx=0.5,dy=0.5,dz=0.5,nbt={SelectedItem:{id:"minecraft:shears"}}] run scoreboard players add @a[team=ct,x=-157,y=2,z=-136,dx=0.5,dy=0.5,dz=0.5,nbt={SelectedItem:{id:"minecraft:shears"}}] Money 500
+
+execute if entity @a[team=ct,x=-157,y=2,z=-136,dx=0.5,dy=0.5,dz=0.5,nbt={SelectedItem:{id:"minecraft:shears"}}] run schedule clear cs_map2:bombb/pd/explosion
